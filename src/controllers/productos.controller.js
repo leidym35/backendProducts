@@ -31,7 +31,7 @@ controller.getById = (req, res) => {
 controller.post = (req, res) => {
 
     let query = "exec ActionsProducts @actionType='insert', @idReference=" + req.body.idReference + ", @reference='" + req.body.reference+
-    "', @descriptionReference='" + req.body.descriptionReference+"', @colour='" + req.body.colour+"', @price=" + req.body.price
+    "', @descriptionReference='" + req.body.descriptionReference+"', @colour='" + req.body.colour+"', @price=" + req.body.price+", @statusRef='" + req.body.statusRef+"'"
 
     console.log(query)
     dbConnect.query(query, (err, rows) => {
